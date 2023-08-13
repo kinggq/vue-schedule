@@ -47,14 +47,15 @@ function getMaskPosition() {
 </script>
 
 <template>
-  isDragging:{{ isDragging }}
+  <pre>
+    isDragging:{{ isDragging }}
   startCell:{{ startCell }}
   endCell:{{ endCell }}
   clientX:{{ clientX }}
   clientY:{{ clientY }}
-  <br>
   width: {{ width }}
   height: {{ height }}
+  </pre>
   <div
     h-600px w-800px select-none border rounded-4px @mousedown="startDrag($event, 1)"
     @mousemove="handleDrag($event, 1)"
