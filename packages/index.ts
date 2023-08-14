@@ -1,5 +1,5 @@
-import Schedule from './schedule.vue'
+import VueSchedule from './vue-schedule/schedule.vue'
 import '@unocss/reset/tailwind.css'
 import 'uno.css'
 
-export { Schedule }
+export default VueSchedule
