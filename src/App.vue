@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, watchEffect } from 'vue'
 import VueSchedule from '../packages'
+import PackageJson from '../package.json'
 
 const value = ref('')
 
@@ -19,6 +20,12 @@ function toggleDark() {
 
 <template>
   <main p="x-4 y-10">
+    <div text-blue-500>
+      <span text="30px" font-bold>
+        Vue Schedule
+      </span>
+      <span text-orange>v{{ PackageJson.version }}</span>
+    </div>
     <div mb-20px text-center>
       <nav mt-6 inline-flex gap-2 text-xl>
         <button icon-btn @click="toggleDark()">
