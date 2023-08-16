@@ -22,7 +22,7 @@ function toggleDark() {
   <main p="x-4 y-10">
     <div text-blue-500>
       <span text="30px" font-bold>
-        Vue Schedule
+        Schedule Vue
       </span>
       <span text-orange>v{{ PackageJson.version }}</span>
     </div>
@@ -52,11 +52,24 @@ function toggleDark() {
       </pre>
     </div>
     <div py-20px text-20px font-bold>
+      usage
+    </div>
+    <pre bg="gray/10" rounded-4px px-20px py-5px>npm i schedule-vue@latest</pre>
+    <pre bg="gray/10" mt-10px overflow-auto rounded-4px px-20px py-5px>
+import VueSchedule from 'schedule-vue'
+import 'schedule-vue/dist/style.css'
+
+const value = ref('')
+
+&lt;VueSchedule v-model:value="value" @format-time="times => time = times" /&gt;
+    </pre>
+    <div py-20px text-20px font-bold>
       Props
     </div>
     <pre>
 interface Props {
   value: string
+  width?: string
   selectedText?: string
   unselectedText?: string
   morningText?: string

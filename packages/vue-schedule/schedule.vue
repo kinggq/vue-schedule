@@ -2,6 +2,7 @@
 import { computed, ref, watch } from 'vue'
 
 const props = withDefaults(defineProps<Props>(), {
+  width: '800px',
   selectedText: '已选',
   unselectedText: '未选',
   morningText: '00:00 - 12:00',
@@ -20,6 +21,7 @@ defineOptions({
 
 interface Props {
   value: string
+  width?: string
   selectedText?: string
   unselectedText?: string
   morningText?: string
@@ -213,8 +215,10 @@ const isEmpty = computed(() =>
 
 <template>
   <div
+    :style="`width:${width}`"
+    min-w-500px
     bg="dark:gray/10"
-    w-800px select-none border="1px dark:gray/5" rounded-4px
+    select-none border="1px dark:gray/5" rounded-4px
   >
     <div h-40px flex items-center px-20px border-b="1px dark:gray/10">
       <div flex="~ gap3" text="12px">
@@ -278,6 +282,7 @@ const isEmpty = computed(() =>
               :key="item.x"
               :border-r="item.x === 47 ? 'none' : '1px dark:gray/10'"
               colspan="1"
+              min-w-12px
               transition="all 0.1s ease"
               :bg=" isPointBetween(item.x, y) && item.selected ? 'blue-500/50 ' : isPointBetween(item.x, y) ? `blue-500/10` : item.selected ? 'blue dark:blue-500/60' : 'hover:gray-500/10'"
               @mousedown="startDrag(item.x, y)"
