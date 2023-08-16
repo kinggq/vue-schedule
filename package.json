@@ -1,6 +1,6 @@
 {
   "name": "schedule-vue",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "private": false,
   "packageManager": "pnpm@8.6.0",
   "main": "dist/schedule-vue.mjs",
