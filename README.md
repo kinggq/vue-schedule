@@ -1,3 +1,5 @@
+<h1>请使用最新版本![](https://github.com/kinggq/versa-chat)</h1>
+
 <h1>Schedule-Vue</h1>
 
 ## Install
